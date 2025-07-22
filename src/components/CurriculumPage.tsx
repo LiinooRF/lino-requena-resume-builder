@@ -33,7 +33,7 @@ const CurriculumPage = () => {
             <div className="text-center lg:text-left animate-fade-in">
               <h1 className="text-4xl lg:text-5xl font-bold mb-2">Lino Requena</h1>
               <h2 className="text-xl lg:text-2xl mb-4 opacity-90">
-                Desarrollador Web | Estudiante de Ingeniería en Informática
+                Desarrollador Web | Estudiante de Ciencias de la Computación
               </h2>
               
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm">
@@ -43,11 +43,11 @@ const CurriculumPage = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  <span>lino@email.com</span>
+                  <span>linitoo@icloud.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
-                  <span>+56 9 1234 5678</span>
+                  <span>+56 9 3702 9093</span>
                 </div>
               </div>
               
@@ -58,11 +58,7 @@ const CurriculumPage = () => {
                 </Button>
                 <Button variant="outline" size="sm" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
                   <Github className="w-4 h-4" />
-                  github.com/lino-dev
-                </Button>
-                <Button variant="outline" size="sm" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
-                  <Linkedin className="w-4 h-4" />
-                  LinkedIn
+                  LiinooRF
                 </Button>
               </div>
             </div>
@@ -83,7 +79,7 @@ const CurriculumPage = () => {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Perfil Profesional */}
-            <Card className="shadow-card animate-fade-in">
+            <Card className="shadow-elegant animate-fade-in backdrop-blur-sm bg-gradient-card border-glass-border">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-2xl">
                   <Target className="w-6 h-6 text-primary" />
@@ -92,13 +88,13 @@ const CurriculumPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  Desarrollador web con enfoque en soluciones prácticas y escalables. Estudiante de Ingeniería en Informática en DUOC UC con experiencia en desarrollo de plataformas online, conocimientos en Cloud Computing (AWS) y manejo avanzado de sistemas operativos Windows y Linux. He trabajado en entornos reales con clientes, automatizando procesos, creando bots y desarrollando plataformas personalizadas.
+                  Desarrollador web con enfoque en soluciones prácticas y escalables. Estudiante de Ciencias de la Computación en la Universidad Católica de Chile con experiencia en desarrollo de plataformas online, conocimientos en Cloud Computing (AWS) y manejo avanzado de sistemas operativos Windows y Linux. He trabajado en entornos reales con clientes, automatizando procesos, creando bots y desarrollando plataformas personalizadas.
                 </p>
               </CardContent>
             </Card>
 
             {/* Experiencia */}
-            <Card className="shadow-card animate-fade-in">
+            <Card className="shadow-elegant animate-fade-in backdrop-blur-sm bg-gradient-card border-glass-border">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-2xl">
                   <Briefcase className="w-6 h-6 text-primary" />
@@ -111,7 +107,7 @@ const CurriculumPage = () => {
                 <div>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                     <h3 className="text-xl font-semibold">Agente de Validación</h3>
-                    <Badge variant="secondary">2024</Badge>
+                    <Badge variant="secondary">2021</Badge>
                   </div>
                   <p className="text-accent font-medium mb-3">Worldcoin (Tools for Humanity)</p>
                   <ul className="text-muted-foreground space-y-2 list-disc list-inside">
@@ -141,7 +137,7 @@ const CurriculumPage = () => {
             </Card>
 
             {/* Proyectos Destacados */}
-            <Card className="shadow-card animate-fade-in">
+            <Card className="shadow-elegant animate-fade-in backdrop-blur-sm bg-gradient-card border-glass-border">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-2xl">
                   <Rocket className="w-6 h-6 text-primary" />
@@ -181,7 +177,7 @@ const CurriculumPage = () => {
           <div className="space-y-6">
             
             {/* Habilidades Técnicas */}
-            <Card className="shadow-card animate-slide-in">
+            <Card className="shadow-elegant animate-slide-in backdrop-blur-sm bg-gradient-card border-glass-border">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Code className="w-5 h-5 text-primary" />
@@ -244,7 +240,7 @@ const CurriculumPage = () => {
             </Card>
 
             {/* Educación */}
-            <Card className="shadow-card animate-slide-in">
+            <Card className="shadow-elegant animate-slide-in backdrop-blur-sm bg-gradient-card border-glass-border">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <GraduationCap className="w-5 h-5 text-primary" />
@@ -253,15 +249,15 @@ const CurriculumPage = () => {
               </CardHeader>
               <CardContent>
                 <div>
-                  <h3 className="font-semibold">Ingeniería en Informática</h3>
-                  <p className="text-accent font-medium">DUOC UC</p>
+                  <h3 className="font-semibold">Ciencias de la Computación</h3>
+                  <p className="text-accent font-medium">Universidad Católica de Chile</p>
                   <p className="text-sm text-muted-foreground">2025 – Actualmente cursando</p>
                 </div>
               </CardContent>
             </Card>
 
             {/* Otras Competencias */}
-            <Card className="shadow-card animate-slide-in">
+            <Card className="shadow-elegant animate-slide-in backdrop-blur-sm bg-gradient-card border-glass-border">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Brain className="w-5 h-5 text-primary" />
