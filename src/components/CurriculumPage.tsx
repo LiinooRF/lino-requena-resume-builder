@@ -254,6 +254,13 @@ const CurriculumPage = () => {
                   <p className="text-sm text-muted-foreground">2025 – Actualmente cursando</p>
                 </div>
               </CardContent>
+              <CardContent>
+                <div>
+                  <h3 className="font-semibold">Desarrollador Full Stack</h3>
+                  <p className="text-accent font-medium">CoderHouse</p>
+                  <p className="text-sm text-muted-foreground">2021</p>
+                </div>
+              </CardContent>
             </Card>
 
             {/* Otras Competencias */}
