@@ -12,6 +12,7 @@ import {
   Globe,
   ChevronDown,
   Building2,
+  Phone,
 } from "lucide-react";
 
 function useScrollReveal() {
