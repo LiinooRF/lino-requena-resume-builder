@@ -135,7 +135,7 @@ const LinoTechPage = () => {
               LinoTech SpA
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed" style={{ textWrap: "balance" }}>
-              Desarrollo de software y soluciones tecnológicas
+              Empresa de desarrollo de software y soluciones tecnológicas
             </p>
             <p className="text-base text-muted-foreground/80 max-w-xl mx-auto mb-10 leading-relaxed">
               Construimos herramientas digitales que automatizan, conectan y escalan tu negocio. Desde plataformas web hasta bots e integraciones con APIs.
