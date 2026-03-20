@@ -279,13 +279,11 @@ const LinoTechPage = () => {
                   linitoo@icloud.com
                 </a>
                 <a
-                  href="https://rifacil.click"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+56937029093"
                   className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors"
                 >
-                  <Globe className="w-5 h-5" />
-                  rifacil.click
+                  <Phone className="w-5 h-5" />
+                  +56 9 3702 9093
                 </a>
               </div>
               <Button size="lg" className="h-12 px-8 text-base" asChild>
