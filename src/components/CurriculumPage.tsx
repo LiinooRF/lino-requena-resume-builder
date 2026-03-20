@@ -340,7 +340,7 @@ const LinoTechPage = () => {
           <Separator className="my-10" />
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground/60">
             <p>© {new Date().getFullYear()} LinoTech SpA. Todos los derechos reservados.</p>
-            <p>Empresa de software · Santiago, Chile</p>
+            <p>Empresa de desarrollo de software y soluciones tecnológicas · Santiago, Chile</p>
           </div>
         </div>
       </footer>
