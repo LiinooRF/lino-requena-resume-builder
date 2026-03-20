@@ -169,13 +169,13 @@ const LinoTechPage = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-foreground">LinoTech SpA</strong> es una empresa tecnológica fundada por Lino Requena, dedicada al desarrollo de software, automatización de procesos y soluciones digitales para negocios de todos los tamaños.
+                  <strong className="text-foreground">LinoTech SpA</strong> es una empresa chilena especializada en el desarrollo de software, automatización de procesos y soluciones digitales para empresas y emprendedores. Fundada por Lino Requena en Santiago de Chile.
                 </p>
                 <p>
-                  Operamos desde Santiago de Chile con un enfoque práctico: entender el problema real del cliente y entregar herramientas que funcionen desde el día uno. No vendemos promesas — construimos soluciones.
+                  Operamos con un enfoque práctico: entender el problema real del cliente y entregar herramientas que funcionen desde el día uno. No vendemos promesas — construimos soluciones.
                 </p>
                 <p>
-                  Como empresa formalmente constituida, trabajamos con la seriedad y responsabilidad que cada proyecto requiere, combinando agilidad técnica con compromiso profesional.
+                  Como empresa formalmente constituida (RUT 78.382.778-6), trabajamos con la seriedad y responsabilidad que cada proyecto requiere, combinando agilidad técnica con compromiso profesional.
                 </p>
               </div>
             </RevealSection>
