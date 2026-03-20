@@ -306,7 +306,7 @@ const LinoTechPage = () => {
                 LinoTech<span className="text-muted-foreground font-normal ml-1">SpA</span>
               </p>
               <p className="text-sm text-muted-foreground mb-4 max-w-sm leading-relaxed">
-                Empresa tecnológica dedicada al desarrollo de software y soluciones digitales. Construimos herramientas que automatizan y escalan tu negocio.
+                Empresa de desarrollo de software y soluciones tecnológicas. Construimos herramientas que automatizan y escalan tu negocio.
               </p>
               <p className="text-xs text-muted-foreground/70">RUT: 78.382.778-6</p>
             </div>
@@ -325,6 +325,10 @@ const LinoTechPage = () => {
                 <li className="flex items-center gap-2">
                   <Mail className="w-3.5 h-3.5" />
                   linitoo@icloud.com
+                </li>
+                <li className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5" />
+                  +56 9 3702 9093
                 </li>
                 <li className="flex items-center gap-2">
                   <MapPin className="w-3.5 h-3.5" />
