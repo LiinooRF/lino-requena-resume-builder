@@ -1,290 +1,348 @@
-import { Badge } from "@/components/ui/badge";
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { 
-  MapPin, 
-  Mail, 
-  Phone, 
-  Globe, 
-  Github, 
-  Linkedin, 
-  Download,
-  Code,
-  Cloud,
-  Shield,
-  Database,
-  Server,
-  Smartphone,
-  GraduationCap,
-  Briefcase,
-  Target,
-  Rocket,
-  Brain
+import {
+  Mail,
+  MapPin,
+  ArrowRight,
+  Code2,
+  Bot,
+  Plug,
+  Cog,
+  Globe,
+  ChevronDown,
+  Building2,
 } from "lucide-react";
 
-const CurriculumPage = () => {
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("revealed");
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+  return ref;
+}
+
+const RevealSection = ({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+}) => {
+  const ref = useScrollReveal();
   return (
-    <div className="min-h-screen bg-gradient-subtle">
-      {/* Header Section */}
-      <div className="bg-gradient-hero text-accent-foreground">
-        <div className="container mx-auto px-6 py-12">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="text-center lg:text-left animate-fade-in">
-              <h1 className="text-4xl lg:text-5xl font-bold mb-2">Lino Requena</h1>
-              <h2 className="text-xl lg:text-2xl mb-4 opacity-90">
-                Desarrollador Web | Estudiante de Ciencias de la Computación
-              </h2>
-              
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4" />
-                  <span>Santiago, Chile</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  <span>linitoo@icloud.com</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  <span>+56 9 3702 9093</span>
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
-                <Button variant="outline" size="sm" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
-                  <Globe className="w-4 h-4" />
-                  rifacil.click
-                </Button>
-                <Button variant="outline" size="sm" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
-                  <Github className="w-4 h-4" />
-                  LiinooRF
-                </Button>
-              </div>
-            </div>
-            
-            <div className="animate-slide-in">
-              <Button variant="hero" size="lg" className="shadow-glow">
-                <Download className="w-5 h-5" />
-                Descargar CV
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
-            
-            {/* Perfil Profesional */}
-            <Card className="shadow-elegant animate-fade-in backdrop-blur-sm bg-gradient-card border-glass-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-2xl">
-                  <Target className="w-6 h-6 text-primary" />
-                  Perfil Profesional
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Desarrollador web con enfoque en soluciones prácticas y escalables. Estudiante de Ciencias de la Computación en la Universidad Católica de Chile con experiencia en desarrollo de plataformas online, conocimientos en Cloud Computing (AWS) y manejo avanzado de sistemas operativos Windows y Linux. He trabajado en entornos reales con clientes, automatizando procesos, creando bots y desarrollando plataformas personalizadas.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Experiencia */}
-            <Card className="shadow-elegant animate-fade-in backdrop-blur-sm bg-gradient-card border-glass-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-2xl">
-                  <Briefcase className="w-6 h-6 text-primary" />
-                  Experiencia
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                
-                {/* Worldcoin */}
-                <div>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                    <h3 className="text-xl font-semibold">Agente de Validación</h3>
-                    <Badge variant="secondary">2021</Badge>
-                  </div>
-                  <p className="text-accent font-medium mb-3">Worldcoin (Tools for Humanity)</p>
-                  <ul className="text-muted-foreground space-y-2 list-disc list-inside">
-                    <li>Participé en el proceso de validación de identidad con tecnología de biometría avanzada, promoviendo la adopción de la criptoeconomía global mediante el escaneo de iris con dispositivos llamados Orbs.</li>
-                    <li>Orienté a usuarios en el uso de la app y entregué información clara sobre privacidad, identidad digital y recompensas en WLD (Worldcoin Token).</li>
-                    <li>Experiencia directa en atención a público, manejo de información sensible y trabajo con herramientas móviles y digitales.</li>
-                  </ul>
-                </div>
-
-                <Separator />
-
-                {/* Rifacil */}
-                <div>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                    <h3 className="text-xl font-semibold">Fundador y Desarrollador</h3>
-                    <Badge variant="secondary">Enero 2024 – Actualidad</Badge>
-                  </div>
-                  <p className="text-accent font-medium mb-3">Rifacil.click</p>
-                  <ul className="text-muted-foreground space-y-2 list-disc list-inside">
-                    <li>Desarrollé rifacil.click, landing page para promocionar mi software propio de rifas online.</li>
-                    <li>Implementación de formulario con validaciones, subida de comprobantes, asignación aleatoria de tickets y gestión desde bot de Telegram con Python y FastAPI.</li>
-                    <li>Alojamiento y configuración completa en VPS Linux, incluyendo Nginx, seguridad SSH y correo con Mailgun.</li>
-                    <li>Optimización SEO para captar clientes en Google y posicionamiento orgánico.</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Proyectos Destacados */}
-            <Card className="shadow-elegant animate-fade-in backdrop-blur-sm bg-gradient-card border-glass-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-2xl">
-                  <Rocket className="w-6 h-6 text-primary" />
-                  Proyectos Destacados
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                
-                <div className="bg-muted p-4 rounded-lg">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Globe className="w-5 h-5 text-accent" />
-                    <h3 className="font-semibold">rifacil.click</h3>
-                  </div>
-                  <p className="text-muted-foreground">Plataforma para gestionar rifas online con validación de pagos, bots y sistema de asignación.</p>
-                </div>
-
-                <div className="bg-muted p-4 rounded-lg">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Smartphone className="w-5 h-5 text-accent" />
-                    <h3 className="font-semibold">Bot de Telegram</h3>
-                  </div>
-                  <p className="text-muted-foreground">Automatización de rifas, gestión de usuarios y envío de correos.</p>
-                </div>
-
-                <div className="bg-muted p-4 rounded-lg">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Shield className="w-5 h-5 text-accent" />
-                    <h3 className="font-semibold">Servidores VPS</h3>
-                  </div>
-                  <p className="text-muted-foreground">Configurados con seguridad personalizada y monitoreo.</p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-6">
-            
-            {/* Habilidades Técnicas */}
-            <Card className="shadow-elegant animate-slide-in backdrop-blur-sm bg-gradient-card border-glass-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Code className="w-5 h-5 text-primary" />
-                  Habilidades Técnicas
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                
-                <div>
-                  <h4 className="font-medium mb-2 flex items-center gap-2">
-                    <Code className="w-4 h-4" />
-                    Lenguajes
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">HTML</Badge>
-                    <Badge variant="outline">CSS</Badge>
-                    <Badge variant="outline">JavaScript</Badge>
-                    <Badge variant="outline">Python</Badge>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-medium mb-2 flex items-center gap-2">
-                    <Server className="w-4 h-4" />
-                    Frameworks & Herramientas
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">Bootstrap</Badge>
-                    <Badge variant="outline">WordPress</Badge>
-                    <Badge variant="outline">Aiogram</Badge>
-                    <Badge variant="outline">FastAPI</Badge>
-                    <Badge variant="outline">Mailgun</Badge>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-medium mb-2 flex items-center gap-2">
-                    <Cloud className="w-4 h-4" />
-                    Cloud Computing
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">AWS EC2</Badge>
-                    <Badge variant="outline">S3</Badge>
-                    <Badge variant="outline">EFS</Badge>
-                    <Badge variant="outline">CloudWatch</Badge>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-medium mb-2 flex items-center gap-2">
-                    <Database className="w-4 h-4" />
-                    Bases de datos
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">MySQL</Badge>
-                    <Badge variant="outline">Archivos planos</Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Educación */}
-            <Card className="shadow-elegant animate-slide-in backdrop-blur-sm bg-gradient-card border-glass-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5 text-primary" />
-                  Educación
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div>
-                  <h3 className="font-semibold">Ciencias de la Computación</h3>
-                  <p className="text-accent font-medium">Universidad Católica de Chile</p>
-                  <p className="text-sm text-muted-foreground">2025 – Actualmente cursando</p>
-                </div>
-              </CardContent>
-              <CardContent>
-                <div>
-                  <h3 className="font-semibold">Desarrollador Full Stack</h3>
-                  <p className="text-accent font-medium">CoderHouse</p>
-                  <p className="text-sm text-muted-foreground">2021</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Otras Competencias */}
-            <Card className="shadow-elegant animate-slide-in backdrop-blur-sm bg-gradient-card border-glass-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Brain className="w-5 h-5 text-primary" />
-                  Otras Competencias
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Atención a público y experiencia en terreno</li>
-                  <li>• Comunicación efectiva y liderazgo</li>
-                  <li>• Aprendizaje autodidacta constante</li>
-                  <li>• Tecnologías emergentes</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </div>
+    <div
+      ref={ref}
+      className={`reveal-section ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
     </div>
   );
 };
 
-export default CurriculumPage;
+const services = [
+  {
+    icon: Code2,
+    title: "Desarrollo de Software",
+    description:
+      "Aplicaciones web y plataformas a medida, construidas con tecnologías modernas para escalar junto a tu negocio.",
+  },
+  {
+    icon: Cog,
+    title: "Automatización de Procesos",
+    description:
+      "Eliminamos tareas manuales con flujos automatizados que ahorran tiempo y reducen errores operativos.",
+  },
+  {
+    icon: Bot,
+    title: "Bots y Soluciones Digitales",
+    description:
+      "Bots de Telegram, WhatsApp y otras plataformas para atención al cliente, ventas y gestión interna.",
+  },
+  {
+    icon: Plug,
+    title: "Integraciones con APIs",
+    description:
+      "Conectamos tus herramientas existentes — WhatsApp Business, pasarelas de pago, CRMs y más.",
+  },
+];
+
+const projects = [
+  {
+    title: "Rifacil.click",
+    category: "Plataforma Web",
+    description:
+      "Sistema completo de rifas online con validación de pagos, asignación aleatoria de tickets y gestión automatizada mediante bot de Telegram.",
+  },
+  {
+    title: "Bot de Gestión",
+    category: "Automatización",
+    description:
+      "Bot de Telegram con integración de correos, gestión de usuarios y procesamiento de comprobantes de pago en tiempo real.",
+  },
+  {
+    title: "Infraestructura Cloud",
+    category: "DevOps",
+    description:
+      "Configuración y mantenimiento de servidores VPS con seguridad avanzada, Nginx, monitoreo y despliegues automatizados.",
+  },
+];
+
+const LinoTechPage = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <a href="#" className="text-lg font-semibold tracking-tight text-foreground">
+            LinoTech<span className="text-muted-foreground font-normal ml-1">SpA</span>
+          </a>
+          <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+            <a href="#nosotros" className="hover:text-foreground transition-colors">Nosotros</a>
+            <a href="#servicios" className="hover:text-foreground transition-colors">Servicios</a>
+            <a href="#proyectos" className="hover:text-foreground transition-colors">Proyectos</a>
+            <a href="#contacto" className="hover:text-foreground transition-colors">Contacto</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="relative min-h-[92vh] flex items-center justify-center pt-16">
+        <div className="absolute inset-0 bg-gradient-subtle" />
+        <div className="relative max-w-6xl mx-auto px-6 text-center">
+          <div className="reveal-section revealed">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-background text-sm text-muted-foreground mb-8">
+              <Building2 className="w-3.5 h-3.5" />
+              Empresa de software · Santiago, Chile
+            </div>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05] mb-6" style={{ textWrap: "balance" }}>
+              LinoTech SpA
+            </h1>
+            <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed" style={{ textWrap: "balance" }}>
+              Desarrollo de software y soluciones tecnológicas
+            </p>
+            <p className="text-base text-muted-foreground/80 max-w-xl mx-auto mb-10 leading-relaxed">
+              Construimos herramientas digitales que automatizan, conectan y escalan tu negocio. Desde plataformas web hasta bots e integraciones con APIs.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button size="lg" className="h-12 px-8 text-base" asChild>
+                <a href="#contacto">
+                  Conversemos
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="lg" className="h-12 px-8 text-base text-muted-foreground" asChild>
+                <a href="#servicios">Ver servicios</a>
+              </Button>
+            </div>
+          </div>
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <ChevronDown className="w-5 h-5 text-muted-foreground/50" />
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="nosotros" className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <RevealSection>
+              <p className="text-sm font-medium tracking-widest uppercase text-accent mb-4">Sobre nosotros</p>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-6 leading-tight">
+                Tecnología con propósito, construida desde Chile
+              </h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  <strong className="text-foreground">LinoTech SpA</strong> es una empresa tecnológica fundada por Lino Requena, dedicada al desarrollo de software, automatización de procesos y soluciones digitales para negocios de todos los tamaños.
+                </p>
+                <p>
+                  Operamos desde Santiago de Chile con un enfoque práctico: entender el problema real del cliente y entregar herramientas que funcionen desde el día uno. No vendemos promesas — construimos soluciones.
+                </p>
+                <p>
+                  Como empresa formalmente constituida, trabajamos con la seriedad y responsabilidad que cada proyecto requiere, combinando agilidad técnica con compromiso profesional.
+                </p>
+              </div>
+            </RevealSection>
+            <RevealSection delay={120}>
+              <div className="bg-muted/50 rounded-2xl p-8 lg:p-10 space-y-6">
+                <div>
+                  <p className="text-sm text-muted-foreground mb-1">Razón Social</p>
+                  <p className="text-lg font-semibold text-foreground">LinoTech SpA</p>
+                </div>
+                <Separator />
+                <div>
+                  <p className="text-sm text-muted-foreground mb-1">RUT</p>
+                  <p className="text-lg font-semibold text-foreground">78.382.778-6</p>
+                </div>
+                <Separator />
+                <div>
+                  <p className="text-sm text-muted-foreground mb-1">Actividad</p>
+                  <p className="text-foreground">Desarrollo de software, automatización de procesos, soluciones digitales y servicios tecnológicos</p>
+                </div>
+                <Separator />
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <MapPin className="w-4 h-4 shrink-0" />
+                  <span>Santiago, Chile</span>
+                </div>
+              </div>
+            </RevealSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="servicios" className="py-24 lg:py-32 bg-muted/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <RevealSection className="text-center mb-16">
+            <p className="text-sm font-medium tracking-widest uppercase text-accent mb-4">Servicios</p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+              Lo que hacemos
+            </h2>
+            <p className="text-muted-foreground max-w-lg mx-auto">
+              Soluciones tecnológicas diseñadas para resolver problemas concretos y generar valor real en tu operación.
+            </p>
+          </RevealSection>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {services.map((service, i) => (
+              <RevealSection key={service.title} delay={i * 80}>
+                <div className="group bg-background rounded-xl border border-border p-8 h-full transition-shadow duration-300 hover:shadow-card">
+                  <service.icon className="w-8 h-8 text-accent mb-5 transition-transform duration-300 group-hover:scale-105" />
+                  <h3 className="text-lg font-semibold text-foreground mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-[0.95rem]">{service.description}</p>
+                </div>
+              </RevealSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="proyectos" className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <RevealSection className="text-center mb-16">
+            <p className="text-sm font-medium tracking-widest uppercase text-accent mb-4">Proyectos</p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+              Trabajo que habla por sí solo
+            </h2>
+            <p className="text-muted-foreground max-w-lg mx-auto">
+              Algunos de los proyectos en los que hemos trabajado, desde plataformas web hasta infraestructura cloud.
+            </p>
+          </RevealSection>
+          <div className="grid md:grid-cols-3 gap-6">
+            {projects.map((project, i) => (
+              <RevealSection key={project.title} delay={i * 80}>
+                <div className="group border border-border rounded-xl p-8 h-full transition-shadow duration-300 hover:shadow-card">
+                  <span className="text-xs font-medium tracking-wider uppercase text-accent">{project.category}</span>
+                  <h3 className="text-xl font-semibold text-foreground mt-3 mb-3">{project.title}</h3>
+                  <p className="text-muted-foreground text-[0.95rem] leading-relaxed">{project.description}</p>
+                </div>
+              </RevealSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contacto" className="py-24 lg:py-32 bg-muted/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-2xl mx-auto text-center">
+            <RevealSection>
+              <p className="text-sm font-medium tracking-widest uppercase text-accent mb-4">Contacto</p>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+                ¿Tienes un proyecto en mente?
+              </h2>
+              <p className="text-muted-foreground mb-10 leading-relaxed">
+                Cuéntanos qué necesitas y te responderemos a la brevedad. Estamos listos para ayudarte a llevar tu idea al siguiente nivel.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+                <a
+                  href="mailto:linitoo@icloud.com"
+                  className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors"
+                >
+                  <Mail className="w-5 h-5" />
+                  linitoo@icloud.com
+                </a>
+                <a
+                  href="https://rifacil.click"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors"
+                >
+                  <Globe className="w-5 h-5" />
+                  rifacil.click
+                </a>
+              </div>
+              <Button size="lg" className="h-12 px-8 text-base" asChild>
+                <a href="mailto:linitoo@icloud.com">
+                  Enviar un correo
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
+              </Button>
+            </RevealSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-border bg-background">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div className="sm:col-span-2 lg:col-span-2">
+              <p className="text-lg font-semibold text-foreground mb-1">
+                LinoTech<span className="text-muted-foreground font-normal ml-1">SpA</span>
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 max-w-sm leading-relaxed">
+                Empresa tecnológica dedicada al desarrollo de software y soluciones digitales. Construimos herramientas que automatizan y escalan tu negocio.
+              </p>
+              <p className="text-xs text-muted-foreground/70">RUT: 78.382.778-6</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-foreground mb-4">Navegación</p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#nosotros" className="hover:text-foreground transition-colors">Nosotros</a></li>
+                <li><a href="#servicios" className="hover:text-foreground transition-colors">Servicios</a></li>
+                <li><a href="#proyectos" className="hover:text-foreground transition-colors">Proyectos</a></li>
+                <li><a href="#contacto" className="hover:text-foreground transition-colors">Contacto</a></li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-foreground mb-4">Contacto</p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-center gap-2">
+                  <Mail className="w-3.5 h-3.5" />
+                  linitoo@icloud.com
+                </li>
+                <li className="flex items-center gap-2">
+                  <MapPin className="w-3.5 h-3.5" />
+                  Santiago, Chile
+                </li>
+              </ul>
+            </div>
+          </div>
+          <Separator className="my-10" />
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground/60">
+            <p>© {new Date().getFullYear()} LinoTech SpA. Todos los derechos reservados.</p>
+            <p>Empresa de software · Santiago, Chile</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default LinoTechPage;
