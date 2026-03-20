@@ -12,6 +12,7 @@ import {
   Globe,
   ChevronDown,
   Building2,
+  Phone,
 } from "lucide-react";
 
 function useScrollReveal() {
@@ -134,7 +135,7 @@ const LinoTechPage = () => {
               LinoTech SpA
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed" style={{ textWrap: "balance" }}>
-              Desarrollo de software y soluciones tecnológicas
+              Empresa de desarrollo de software y soluciones tecnológicas
             </p>
             <p className="text-base text-muted-foreground/80 max-w-xl mx-auto mb-10 leading-relaxed">
               Construimos herramientas digitales que automatizan, conectan y escalan tu negocio. Desde plataformas web hasta bots e integraciones con APIs.
@@ -168,13 +169,13 @@ const LinoTechPage = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-foreground">LinoTech SpA</strong> es una empresa tecnológica fundada por Lino Requena, dedicada al desarrollo de software, automatización de procesos y soluciones digitales para negocios de todos los tamaños.
+                  <strong className="text-foreground">LinoTech SpA</strong> es una empresa chilena especializada en el desarrollo de software, automatización de procesos y soluciones digitales para empresas y emprendedores. Fundada por Lino Requena en Santiago de Chile.
                 </p>
                 <p>
-                  Operamos desde Santiago de Chile con un enfoque práctico: entender el problema real del cliente y entregar herramientas que funcionen desde el día uno. No vendemos promesas — construimos soluciones.
+                  Operamos con un enfoque práctico: entender el problema real del cliente y entregar herramientas que funcionen desde el día uno. No vendemos promesas — construimos soluciones.
                 </p>
                 <p>
-                  Como empresa formalmente constituida, trabajamos con la seriedad y responsabilidad que cada proyecto requiere, combinando agilidad técnica con compromiso profesional.
+                  Como empresa formalmente constituida (RUT 78.382.778-6), trabajamos con la seriedad y responsabilidad que cada proyecto requiere, combinando agilidad técnica con compromiso profesional.
                 </p>
               </div>
             </RevealSection>
@@ -278,13 +279,11 @@ const LinoTechPage = () => {
                   linitoo@icloud.com
                 </a>
                 <a
-                  href="https://rifacil.click"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+56937029093"
                   className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors"
                 >
-                  <Globe className="w-5 h-5" />
-                  rifacil.click
+                  <Phone className="w-5 h-5" />
+                  +56 9 3702 9093
                 </a>
               </div>
               <Button size="lg" className="h-12 px-8 text-base" asChild>
@@ -307,7 +306,7 @@ const LinoTechPage = () => {
                 LinoTech<span className="text-muted-foreground font-normal ml-1">SpA</span>
               </p>
               <p className="text-sm text-muted-foreground mb-4 max-w-sm leading-relaxed">
-                Empresa tecnológica dedicada al desarrollo de software y soluciones digitales. Construimos herramientas que automatizan y escalan tu negocio.
+                Empresa de desarrollo de software y soluciones tecnológicas. Construimos herramientas que automatizan y escalan tu negocio.
               </p>
               <p className="text-xs text-muted-foreground/70">RUT: 78.382.778-6</p>
             </div>
@@ -328,6 +327,10 @@ const LinoTechPage = () => {
                   linitoo@icloud.com
                 </li>
                 <li className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5" />
+                  +56 9 3702 9093
+                </li>
+                <li className="flex items-center gap-2">
                   <MapPin className="w-3.5 h-3.5" />
                   Santiago, Chile
                 </li>
@@ -337,7 +340,7 @@ const LinoTechPage = () => {
           <Separator className="my-10" />
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground/60">
             <p>© {new Date().getFullYear()} LinoTech SpA. Todos los derechos reservados.</p>
-            <p>Empresa de software · Santiago, Chile</p>
+            <p>Empresa de desarrollo de software y soluciones tecnológicas · Santiago, Chile</p>
           </div>
         </div>
       </footer>
