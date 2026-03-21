@@ -207,23 +207,23 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-        <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Volver al inicio
-          </Link>
-          <span className="text-sm font-semibold text-foreground">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <Link to="/" className="text-lg font-semibold tracking-tight text-foreground">
             LinoTech<span className="text-muted-foreground font-normal ml-1">SpA</span>
-          </span>
+          </Link>
+          <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+            <Link to="/" className="hover:text-foreground transition-colors">Inicio</Link>
+            <a href="/#nosotros" className="hover:text-foreground transition-colors">Nosotros</a>
+            <a href="/#servicios" className="hover:text-foreground transition-colors">Servicios</a>
+            <a href="/#proyectos" className="hover:text-foreground transition-colors">Proyectos</a>
+            <a href="/#contacto" className="hover:text-foreground transition-colors">Contacto</a>
+          </div>
         </div>
       </nav>
 
       {/* Content */}
-      <main className="max-w-4xl mx-auto px-6 py-16 lg:py-24">
+      <main className="max-w-4xl mx-auto px-6 py-16 lg:py-24 pt-24">
         <header className="mb-16">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
             Política de Privacidad
