@@ -273,11 +273,11 @@ const LinoTechPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
                 <a
-                  href="mailto:linitoo@icloud.com"
+                  href="mailto:contacto@linorequena.xyz"
                   className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors"
                 >
                   <Mail className="w-5 h-5" />
-                  linitoo@icloud.com
+                  contacto@linorequena.xyz
                 </a>
                 <a
                   href="tel:+56937029093"
@@ -288,7 +288,7 @@ const LinoTechPage = () => {
                 </a>
               </div>
               <Button size="lg" className="h-12 px-8 text-base" asChild>
-                <a href="mailto:linitoo@icloud.com">
+                <a href="mailto:contacto@linorequena.xyz">
                   Enviar un correo
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </a>
@@ -325,7 +325,7 @@ const LinoTechPage = () => {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <Mail className="w-3.5 h-3.5" />
-                  linitoo@icloud.com
+                  contacto@linorequena.xyz
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone className="w-3.5 h-3.5" />
