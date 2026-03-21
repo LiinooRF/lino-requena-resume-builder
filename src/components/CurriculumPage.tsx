@@ -118,6 +118,7 @@ const LinoTechPage = () => {
             <a href="#servicios" className="hover:text-foreground transition-colors">Servicios</a>
             <a href="#proyectos" className="hover:text-foreground transition-colors">Proyectos</a>
             <a href="#contacto" className="hover:text-foreground transition-colors">Contacto</a>
+            <a href="/politica-de-privacidad" className="hover:text-foreground transition-colors">Privacidad</a>
           </div>
         </div>
       </nav>
