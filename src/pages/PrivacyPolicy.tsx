@@ -223,7 +223,7 @@ const PrivacyPolicy = () => {
       </nav>
 
       {/* Content */}
-      <main className="max-w-4xl mx-auto px-6 py-16 lg:py-24">
+      <main className="max-w-4xl mx-auto px-6 py-16 lg:py-24 pt-24">
         <header className="mb-16">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
             Política de Privacidad
