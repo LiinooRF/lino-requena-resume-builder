@@ -43,7 +43,7 @@ const experience = [
   {
     title: "Fundador & Desarrollador",
     company: "LinoTech SpA",
-    period: "2024 – Presente",
+    period: "2025 – Presente",
     description:
       "Empresa de desarrollo de software y soluciones tecnológicas. Desarrollo de plataformas web, automatización de procesos, bots e integraciones con APIs para empresas y emprendedores.",
   },
@@ -79,7 +79,7 @@ const CV = () => {
             Lino Requena
           </h1>
           <p className="text-xl text-muted-foreground mb-6">
-            Desarrollador de Software & Emprendedor Tecnológico
+            Automatizaciones con IA
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
             <a href="mailto:linitoo@icloud.com" className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors">
