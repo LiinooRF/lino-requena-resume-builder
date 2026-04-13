@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import OAuthCallback from "./pages/OAuthCallback";
+import CV from "./pages/CV";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
           <Route path="/oauth.php" element={<OAuthCallback />} />
+          <Route path="/cv" element={<CV />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
