@@ -84,7 +84,7 @@ const CV = () => {
             Lino Requena
           </h1>
           <p className="text-xl text-muted-foreground mb-6">
-            Automatizaciones con IA
+            Creador de soluciones con bots, APIs y flujos automatizados
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
             <a href="mailto:linitoo@icloud.com" className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors">
@@ -111,7 +111,7 @@ const CV = () => {
             Perfil
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Tengo 21 años, estudiante de segundo año de Ingeniería Informática en Duoc UC. Fundador de LinoTech SpA, empresa dedicada al desarrollo de software, automatización de procesos y soluciones digitales. Meta Tech Provider verificado con acceso a las APIs de Meta. Apasionado por construir herramientas tecnológicas que resuelvan problemas reales.
+            Estudiante de segundo año de Ingeniería Informática en Duoc UC y fundador de LinoTech SpA. Me especializo en desarrollo de software, automatización de procesos e integración de APIs para empresas y emprendedores. He construido plataformas web, bots y flujos automatizados con IA, enfocados en resolver problemas reales, ahorrar tiempo operativo y mejorar la atención digital. Cuento con experiencia trabajando con n8n, WhatsApp Business API, Telegram, Meta APIs e infraestructura en VPS/Linux.
           </p>
         </section>
 
