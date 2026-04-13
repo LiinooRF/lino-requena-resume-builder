@@ -276,14 +276,14 @@ const CV = () => {
             <Languages className="w-5 h-5 text-accent" />
             Idiomas
           </h2>
-          <div className="flex gap-4">
-            <div className="border border-border rounded-xl px-6 py-4">
-              <p className="font-semibold text-foreground text-sm">Español</p>
-              <p className="text-xs text-muted-foreground">Nativo</p>
+          <div className="flex flex-wrap gap-6">
+            <div className="flex items-center gap-3">
+              <span className="font-semibold text-sm text-foreground">Español</span>
+              <span className="text-xs px-2.5 py-1 rounded-full bg-accent text-accent-foreground">Nativo</span>
             </div>
-            <div className="border border-border rounded-xl px-6 py-4">
-              <p className="font-semibold text-foreground text-sm">Inglés</p>
-              <p className="text-xs text-muted-foreground">Básico</p>
+            <div className="flex items-center gap-3">
+              <span className="font-semibold text-sm text-foreground">Inglés</span>
+              <span className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground">Básico</span>
             </div>
           </div>
         </section>
