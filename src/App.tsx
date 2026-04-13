@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import OAuthCallback from "./pages/OAuthCallback";
+import CV from "./pages/CV";
 
 const queryClient = new QueryClient();
 
