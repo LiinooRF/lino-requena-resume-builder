@@ -33,6 +33,11 @@ const skills = [
     items: ["n8n", "Bots de Telegram", "APIs de Meta", "Mailgun", "WhatsApp Business API"],
   },
   {
+    category: "Marketing Digital",
+    icon: Globe,
+    items: ["Meta Ads", "Google Ads"],
+  },
+  {
     category: "Herramientas",
     icon: Wrench,
     items: ["Git", "Vercel", "Supabase", "DevOps"],
@@ -129,9 +134,15 @@ const CV = () => {
             <GraduationCap className="w-5 h-5 text-accent" />
             Educación
           </h2>
-          <div className="border border-border rounded-xl p-6">
-            <p className="font-semibold text-foreground">Ingeniería Informática</p>
-            <p className="text-sm text-muted-foreground">Duoc UC · 2º año en curso</p>
+          <div className="space-y-4">
+            <div className="border border-border rounded-xl p-6">
+              <p className="font-semibold text-foreground">Ingeniería Informática</p>
+              <p className="text-sm text-muted-foreground">Duoc UC · 2º año en curso</p>
+            </div>
+            <div className="border border-border rounded-xl p-6">
+              <p className="font-semibold text-foreground">Desarrollo Web</p>
+              <p className="text-sm text-muted-foreground">Coderhouse · 2022</p>
+            </div>
           </div>
         </section>
 
@@ -204,15 +215,6 @@ const CV = () => {
           </div>
         </section>
 
-        {/* Projects link */}
-        <section className="text-center pt-6">
-          <Button variant="outline" size="lg" asChild>
-            <a href="/#proyectos">
-              Ver proyectos
-              <ExternalLink className="w-4 h-4 ml-1" />
-            </a>
-          </Button>
-        </section>
       </main>
     </div>
   );
