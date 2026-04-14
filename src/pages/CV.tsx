@@ -1,98 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import {
   Mail,
   MapPin,
   ArrowLeft,
   Globe,
-  GraduationCap,
-  Code2,
-  Bot,
-  Server,
-  Wrench,
-  Languages,
   Phone,
-  Zap,
-  FolderOpen,
-  Star,
   Download,
 } from "lucide-react";
 import metaTechProvider from "@/assets/meta-tech-provider.png";
-
-const skills = [
-  {
-    category: "Tecnologías Principales",
-    icon: Code2,
-    items: ["Python", "Java", "TypeScript", "PostgreSQL", "Git"],
-  },
-  {
-    category: "Automatización & Integraciones",
-    icon: Bot,
-    items: ["n8n", "Bots de Telegram", "WhatsApp Business API", "APIs de Meta", "Mailgun"],
-  },
-  {
-    category: "Infraestructura & Despliegue",
-    icon: Server,
-    items: ["Linux", "VPS", "Nginx", "Cloud Hosting", "Vercel", "Supabase", "DevOps"],
-  },
-  {
-    category: "Frontend",
-    icon: Globe,
-    items: ["React", "TypeScript", "Tailwind CSS", "HTML/CSS", "WordPress"],
-  },
-];
-
-const experience = [
-  {
-    title: "Fundador & Desarrollador",
-    company: "LinoTech SpA",
-    period: "2025 – Presente",
-    bullets: [
-      "Desarrollo de software y soluciones digitales para empresas y emprendedores.",
-      "Automatización de procesos operativos mediante flujos con n8n, Telegram, WhatsApp Business API y correo transaccional.",
-      "Diseño e implementación de bots e integraciones con APIs de terceros.",
-      "Despliegue y mantenimiento de infraestructura en VPS con Linux y Nginx.",
-    ],
-  },
-  {
-    title: "Creador",
-    company: "Rifacil.click",
-    period: "2025 – Presente",
-    bullets: [
-      "Plataforma de rifas online con validación automática de pagos.",
-      "Asignación aleatoria de tickets y gestión integral mediante bot de Telegram.",
-      "Arquitectura full-stack con base de datos, backend y panel de administración.",
-    ],
-  },
-];
-
-const projects = [
-  {
-    name: "Rifacil.click",
-    description: "Plataforma de rifas online con pagos automatizados, asignación de tickets y gestión vía Telegram.",
-  },
-  {
-    name: "Automatizaciones con n8n y APIs",
-    description: "Flujos de trabajo automatizados para empresas: notificaciones, sincronización de datos y procesos operativos.",
-  },
-  {
-    name: "Integraciones con WhatsApp Business API y Meta",
-    description: "Conexión de sistemas empresariales con las APIs de Meta para atención digital y marketing automatizado.",
-  },
-  {
-    name: "Infraestructura self-hosted en VPS",
-    description: "Despliegue y administración de servidores Linux con Nginx para aplicaciones web en producción.",
-  },
-];
-
-const strengths = [
-  "Automatización de procesos",
-  "Integración de APIs",
-  "Desarrollo de bots",
-  "Soluciones con IA",
-  "Despliegue en VPS",
-  "Resolución de problemas reales con tecnología",
-];
 
 const CV = () => {
   const handleDownloadPDF = () => {
@@ -101,6 +16,7 @@ const CV = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Nav - hidden on print */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50 print:hidden">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Button variant="ghost" size="sm" asChild>
@@ -119,185 +35,174 @@ const CV = () => {
         </div>
       </nav>
 
-      <main className="max-w-4xl mx-auto px-6 pt-28 pb-20">
+      <main className="max-w-4xl mx-auto px-6 pt-28 pb-20 cv-print-main">
         {/* Header */}
-        <section className="mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-2">
-            Lino Requena
-          </h1>
-          <p className="text-xl text-muted-foreground mb-6">
-            Desarrollador de automatizaciones e integraciones con IA
-          </p>
-          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-            <a href="mailto:linitoo@icloud.com" className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors">
-              <Mail className="w-4 h-4" /> linitoo@icloud.com
+        <header className="mb-8 cv-header">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-1 cv-name">
+                Lino Requena
+              </h1>
+              <p className="text-lg text-muted-foreground cv-subtitle">
+                Desarrollador de automatizaciones e integraciones con IA
+              </p>
+            </div>
+            <div className="flex items-center gap-3 cv-meta-badge">
+              <img src={metaTechProvider} alt="Meta Tech Provider" className="h-10 w-auto" />
+              <div>
+                <p className="text-xs font-semibold text-foreground">Meta Tech Provider</p>
+                <p className="text-[10px] text-muted-foreground">Verificado</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted-foreground mt-3 cv-contact">
+            <a href="mailto:linitoo@icloud.com" className="inline-flex items-center gap-1 hover:text-foreground transition-colors">
+              <Mail className="w-3.5 h-3.5" /> linitoo@icloud.com
             </a>
-            <a href="tel:+56937029093" className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors">
-              <Phone className="w-4 h-4" /> +56 9 3702 9093
+            <a href="tel:+56937029093" className="inline-flex items-center gap-1 hover:text-foreground transition-colors">
+              <Phone className="w-3.5 h-3.5" /> +56 9 3702 9093
             </a>
-            <span className="inline-flex items-center gap-1.5">
-              <MapPin className="w-4 h-4" /> Santiago, Chile
+            <span className="inline-flex items-center gap-1">
+              <MapPin className="w-3.5 h-3.5" /> Santiago, Chile
             </span>
-            <a href="https://github.com/LiinooRF" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors">
-              <Globe className="w-4 h-4" /> github.com/LiinooRF
+            <a href="https://github.com/LiinooRF" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-foreground transition-colors">
+              <Globe className="w-3.5 h-3.5" /> github.com/LiinooRF
             </a>
           </div>
-        </section>
+        </header>
 
-        <Separator className="mb-10" />
+        <hr className="border-border mb-6" />
 
         {/* Profile */}
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
-            <GraduationCap className="w-5 h-5 text-accent" />
-            Perfil Profesional
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Estudiante de segundo año de Ingeniería Informática en Duoc UC y fundador de LinoTech SpA. Me especializo en desarrollo de software, automatización de procesos e integración de APIs para empresas y emprendedores. He diseñado y construido plataformas web, bots conversacionales y flujos automatizados con inteligencia artificial, orientados a resolver problemas reales, reducir tiempos operativos y potenciar la atención digital. Cuento con experiencia práctica en n8n, WhatsApp Business API, Telegram, Meta APIs e infraestructura en VPS/Linux. Meta Tech Provider verificado con acceso directo a las APIs de la plataforma.
+        <section className="mb-6 cv-profile">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-2 cv-section-title">Perfil</h2>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Estudiante de Ingeniería Informática en Duoc UC y fundador de LinoTech SpA. Especializado en desarrollo de software, automatización con IA e integración de APIs. Experiencia práctica en n8n, WhatsApp Business API, Telegram, Meta APIs e infraestructura VPS/Linux. Meta Tech Provider verificado.
           </p>
         </section>
 
-        {/* Meta Badge */}
-        <section className="mb-10">
-          <div className="inline-flex items-center gap-4 border border-border rounded-xl px-6 py-4 bg-muted/30">
-            <img src={metaTechProvider} alt="Meta Tech Provider" className="h-12 w-auto" />
-            <div>
-              <p className="text-sm font-semibold text-foreground">Meta Tech Provider</p>
-              <p className="text-xs text-muted-foreground">Proveedor tecnológico verificado por Meta</p>
-            </div>
-          </div>
-        </section>
-
-        <Separator className="mb-10" />
-
-        {/* Experience */}
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-            <Wrench className="w-5 h-5 text-accent" />
-            Experiencia
-          </h2>
-          <div className="space-y-4">
-            {experience.map((exp) => (
-              <div key={exp.company} className="border border-border rounded-xl p-6">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                  <p className="font-semibold text-foreground">{exp.title}</p>
-                  <span className="text-xs text-muted-foreground">{exp.period}</span>
+        {/* 2-column layout for print */}
+        <div className="cv-columns">
+          {/* Left column */}
+          <div className="cv-col-left">
+            {/* Experience */}
+            <section className="mb-6">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-3 cv-section-title">Experiencia</h2>
+              <div className="space-y-4">
+                <div>
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm font-semibold text-foreground">Fundador & Desarrollador</p>
+                    <span className="text-xs text-muted-foreground">2025 – Presente</span>
+                  </div>
+                  <p className="text-xs font-medium text-accent mb-1">LinoTech SpA</p>
+                  <ul className="text-xs text-muted-foreground space-y-0.5">
+                    <li>• Software y soluciones digitales para empresas.</li>
+                    <li>• Automatización con n8n, Telegram, WhatsApp API y correo transaccional.</li>
+                    <li>• Bots e integraciones con APIs de terceros.</li>
+                    <li>• Infraestructura VPS con Linux y Nginx.</li>
+                  </ul>
                 </div>
-                <p className="text-sm font-medium text-accent mb-3">{exp.company}</p>
-                <ul className="space-y-1.5">
-                  {exp.bullets.map((bullet, i) => (
-                    <li key={i} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
-                      <span className="text-accent mt-1.5 shrink-0">•</span>
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <Separator className="mb-10" />
-
-        {/* Projects */}
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-            <FolderOpen className="w-5 h-5 text-accent" />
-            Proyectos Destacados
-          </h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {projects.map((project) => (
-              <div key={project.name} className="border border-border rounded-xl p-6">
-                <p className="font-semibold text-foreground text-sm mb-2">{project.name}</p>
-                <p className="text-xs text-muted-foreground leading-relaxed">{project.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <Separator className="mb-10" />
-
-        {/* Skills */}
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-            <Code2 className="w-5 h-5 text-accent" />
-            Habilidades Técnicas
-          </h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {skills.map((group) => (
-              <div key={group.category} className="border border-border rounded-xl p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <group.icon className="w-4 h-4 text-accent" />
-                  <p className="font-semibold text-sm text-foreground">{group.category}</p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <span key={item} className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground">
-                      {item}
-                    </span>
-                  ))}
+                <div>
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm font-semibold text-foreground">Creador</p>
+                    <span className="text-xs text-muted-foreground">2025 – Presente</span>
+                  </div>
+                  <p className="text-xs font-medium text-accent mb-1">Rifacil.click</p>
+                  <ul className="text-xs text-muted-foreground space-y-0.5">
+                    <li>• Plataforma de rifas online con pagos automatizados.</li>
+                    <li>• Asignación de tickets y gestión vía bot de Telegram.</li>
+                    <li>• Arquitectura full-stack con panel de administración.</li>
+                  </ul>
                 </div>
               </div>
-            ))}
+            </section>
+
+            {/* Projects */}
+            <section className="mb-6">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-3 cv-section-title">Proyectos Destacados</h2>
+              <div className="space-y-2">
+                <div>
+                  <p className="text-xs font-semibold text-foreground">Rifacil.click</p>
+                  <p className="text-xs text-muted-foreground">Rifas online con pagos automatizados y gestión vía Telegram.</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground">Automatizaciones con n8n</p>
+                  <p className="text-xs text-muted-foreground">Flujos automatizados: notificaciones, sincronización y procesos operativos.</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground">Integraciones Meta & WhatsApp</p>
+                  <p className="text-xs text-muted-foreground">Conexión con APIs de Meta para atención digital y marketing.</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground">Infraestructura VPS</p>
+                  <p className="text-xs text-muted-foreground">Servidores Linux con Nginx para apps en producción.</p>
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
 
-        <Separator className="mb-10" />
+          {/* Right column */}
+          <div className="cv-col-right">
+            {/* Skills */}
+            <section className="mb-6">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-3 cv-section-title">Habilidades Técnicas</h2>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-xs font-semibold text-foreground mb-1">Tecnologías Principales</p>
+                  <p className="text-xs text-muted-foreground">Python · Java · TypeScript · PostgreSQL · Git</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground mb-1">Automatización & Integraciones</p>
+                  <p className="text-xs text-muted-foreground">n8n · Bots de Telegram · WhatsApp Business API · APIs de Meta · Mailgun</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground mb-1">Infraestructura & Despliegue</p>
+                  <p className="text-xs text-muted-foreground">Linux · VPS · Nginx · Cloud Hosting · Vercel · Supabase · DevOps</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground mb-1">Frontend</p>
+                  <p className="text-xs text-muted-foreground">React · TypeScript · Tailwind CSS · HTML/CSS · WordPress</p>
+                </div>
+              </div>
+            </section>
 
-        {/* Strengths */}
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-            <Zap className="w-5 h-5 text-accent" />
-            Fortalezas
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            {strengths.map((s) => (
-              <span key={s} className="text-sm px-4 py-2 rounded-full border border-border bg-muted/30 text-foreground">
-                {s}
-              </span>
-            ))}
+            {/* Strengths */}
+            <section className="mb-6">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-3 cv-section-title">Fortalezas</h2>
+              <div className="flex flex-wrap gap-1.5">
+                {["Automatización de procesos", "Integración de APIs", "Desarrollo de bots", "Soluciones con IA", "Despliegue en VPS", "Resolución de problemas"].map((s) => (
+                  <span key={s} className="text-[11px] px-2.5 py-1 rounded-full border border-border bg-muted/30 text-foreground">
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </section>
+
+            {/* Education */}
+            <section className="mb-6">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-3 cv-section-title">Educación</h2>
+              <div className="space-y-2">
+                <div>
+                  <p className="text-xs font-semibold text-foreground">Ingeniería Informática</p>
+                  <p className="text-xs text-muted-foreground">Duoc UC · 2º año en curso</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground">Desarrollo Web</p>
+                  <p className="text-xs text-muted-foreground">Coderhouse · 2022</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Languages */}
+            <section>
+              <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-3 cv-section-title">Idiomas</h2>
+              <div className="flex gap-4 text-xs">
+                <span><strong className="text-foreground">Español</strong> — Nativo</span>
+                <span><strong className="text-foreground">Inglés</strong> — Básico</span>
+              </div>
+            </section>
           </div>
-        </section>
-
-        <Separator className="mb-10" />
-
-        {/* Education */}
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-            <GraduationCap className="w-5 h-5 text-accent" />
-            Educación
-          </h2>
-          <div className="space-y-4">
-            <div className="border border-border rounded-xl p-6">
-              <p className="font-semibold text-foreground">Ingeniería Informática</p>
-              <p className="text-sm text-muted-foreground">Duoc UC · 2º año en curso</p>
-            </div>
-            <div className="border border-border rounded-xl p-6">
-              <p className="font-semibold text-foreground">Desarrollo Web</p>
-              <p className="text-sm text-muted-foreground">Coderhouse · 2022</p>
-            </div>
-          </div>
-        </section>
-
-        <Separator className="mb-10" />
-
-        {/* Languages */}
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-            <Languages className="w-5 h-5 text-accent" />
-            Idiomas
-          </h2>
-          <div className="flex flex-wrap gap-6">
-            <div className="flex items-center gap-3">
-              <span className="font-semibold text-sm text-foreground">Español</span>
-              <span className="text-xs px-2.5 py-1 rounded-full bg-accent text-accent-foreground">Nativo</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="font-semibold text-sm text-foreground">Inglés</span>
-              <span className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground">Básico</span>
-            </div>
-          </div>
-        </section>
+        </div>
       </main>
     </div>
   );
