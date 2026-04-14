@@ -15,6 +15,7 @@ import {
   Zap,
   FolderOpen,
   Star,
+  Download,
 } from "lucide-react";
 import metaTechProvider from "@/assets/meta-tech-provider.png";
 
@@ -94,9 +95,13 @@ const strengths = [
 ];
 
 const CV = () => {
+  const handleDownloadPDF = () => {
+    window.print();
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50 print:hidden">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Button variant="ghost" size="sm" asChild>
             <a href="/">
@@ -104,7 +109,13 @@ const CV = () => {
               LinoTech SpA
             </a>
           </Button>
-          <span className="text-sm text-muted-foreground">Currículum Vitae</span>
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-muted-foreground hidden sm:inline">Currículum Vitae</span>
+            <Button size="sm" onClick={handleDownloadPDF}>
+              <Download className="w-4 h-4 mr-1" />
+              Descargar PDF
+            </Button>
+          </div>
         </div>
       </nav>
 
