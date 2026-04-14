@@ -100,11 +100,18 @@
 }
 
 @media print {
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
   body {
     background: white !important;
     color: black !important;
-    font-size: 11pt;
-    line-height: 1.4;
+    font-size: 9pt !important;
+    line-height: 1.35 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .print\:hidden {
@@ -112,21 +119,105 @@
   }
 
   main {
-    padding-top: 0 !important;
+    padding-top: 8px !important;
+    padding-bottom: 0 !important;
     max-width: 100% !important;
   }
 
+  h1 {
+    font-size: 20pt !important;
+    margin-bottom: 2px !important;
+  }
+
+  h2 {
+    font-size: 11pt !important;
+    margin-bottom: 4px !important;
+  }
+
   section {
-    break-inside: avoid;
+    margin-bottom: 8px !important;
   }
 
+  hr, [data-orientation] {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  p {
+    margin-bottom: 2px !important;
+  }
+
+  .text-xl {
+    font-size: 10pt !important;
+  }
+
+  /* Compact cards */
+  .rounded-xl {
+    padding: 6px 10px !important;
+    border-radius: 6px !important;
+  }
+
+  .space-y-4 > * + * {
+    margin-top: 4px !important;
+  }
+
+  .space-y-1\.5 > * + * {
+    margin-top: 1px !important;
+  }
+
+  .gap-4, .gap-6 {
+    gap: 4px !important;
+  }
+
+  .gap-3 {
+    gap: 3px !important;
+  }
+
+  .mb-10 {
+    margin-bottom: 6px !important;
+  }
+
+  .mb-6 {
+    margin-bottom: 4px !important;
+  }
+
+  .mb-4, .mb-3, .mb-2 {
+    margin-bottom: 2px !important;
+  }
+
+  .mb-12 {
+    margin-bottom: 6px !important;
+  }
+
+  .py-4, .py-2 {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+
+  .px-4, .px-6 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .leading-relaxed {
+    line-height: 1.35 !important;
+  }
+
+  /* Badges compact */
+  .rounded-full {
+    padding: 1px 6px !important;
+    font-size: 7.5pt !important;
+  }
+
+  /* Grid stays 2 cols */
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Colors for print */
   * {
-    color: black !important;
+    color: #1a1a1a !important;
     border-color: #ddd !important;
-  }
-
-  .bg-muted\/50, .bg-muted\/30 {
-    background: #f5f5f5 !important;
   }
 
   .text-muted-foreground {
@@ -139,11 +230,25 @@
 
   .bg-accent {
     background: #2a7ab5 !important;
+  }
+
+  .bg-accent span,
+  .bg-accent.text-accent-foreground,
+  .text-accent-foreground {
     color: white !important;
   }
 
-  .bg-accent .text-accent-foreground,
-  .bg-accent span {
-    color: white !important;
+  .bg-muted, .bg-muted\/30, .bg-muted\/50 {
+    background: #f3f3f3 !important;
+  }
+
+  /* Avoid page breaks inside sections */
+  section {
+    break-inside: avoid;
+  }
+
+  /* Meta badge compact */
+  img {
+    height: 28px !important;
   }
 }
