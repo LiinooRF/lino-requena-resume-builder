@@ -85,6 +85,13 @@ const services = [
 
 const projects = [
   {
+    title: "IAxTi.cl",
+    category: "IA + WhatsApp",
+    description:
+      "IA en tu WhatsApp que atiende clientes, da seguimiento y cierra ventas 24/7. Funciona con o sin CRM, integrada oficialmente con la API de WhatsApp Business como Tech Provider de Meta.",
+    link: "https://iaxti.cl",
+  },
+  {
     title: "Rifacil.click",
     category: "Plataforma Web",
     description:

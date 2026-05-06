@@ -77,7 +77,7 @@ const CV = () => {
         <section className="mb-6 cv-profile">
           <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-2 cv-section-title">Perfil</h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Estudiante de Ingeniería Informática en Duoc UC y fundador de LinoTech SpA. Especializado en desarrollo de software, automatización con IA e integración de APIs. Experiencia práctica en n8n, WhatsApp Business API, Telegram, Meta APIs e infraestructura VPS/Linux. Meta Tech Provider verificado.
+            Estudiante de Ingeniería Informática en Duoc UC, fundador de LinoTech SpA y de IAxTi.cl — IA en WhatsApp que atiende clientes, da seguimiento y cierra ventas 24/7 (con o sin CRM). Especializado en desarrollo de software, automatización con IA e integración de APIs (n8n, WhatsApp Business API, Telegram, Meta) e infraestructura VPS/Linux. Meta Tech Provider verificado.
           </p>
         </section>
 
