@@ -77,7 +77,7 @@ const CV = () => {
         <section className="mb-6 cv-profile">
           <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-2 cv-section-title">Perfil</h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Estudiante de Ingeniería Informática en Duoc UC y fundador de LinoTech SpA. Especializado en desarrollo de software, automatización con IA e integración de APIs. Experiencia práctica en n8n, WhatsApp Business API, Telegram, Meta APIs e infraestructura VPS/Linux. Meta Tech Provider verificado.
+            Estudiante de Ingeniería Informática en Duoc UC, fundador de LinoTech SpA y de IAxTi.cl — IA en WhatsApp que atiende clientes, da seguimiento y cierra ventas 24/7 (con o sin CRM). Especializado en desarrollo de software, automatización con IA e integración de APIs (n8n, WhatsApp Business API, Telegram, Meta) e infraestructura VPS/Linux. Meta Tech Provider verificado.
           </p>
         </section>
 
@@ -104,6 +104,18 @@ const CV = () => {
                 </div>
                 <div>
                   <div className="flex items-center justify-between">
+                    <p className="text-sm font-semibold text-foreground">Fundador</p>
+                    <span className="text-xs text-muted-foreground">2025 – Presente</span>
+                  </div>
+                  <p className="text-xs font-medium text-accent mb-1">IAxTi.cl</p>
+                  <ul className="text-xs text-muted-foreground space-y-0.5">
+                    <li>• IA en WhatsApp que atiende, da seguimiento y cierra ventas 24/7.</li>
+                    <li>• Funciona con o sin CRM; integración oficial con WhatsApp Business API.</li>
+                    <li>• Calificación de leads, agenda automática y cierre conversacional.</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="flex items-center justify-between">
                     <p className="text-sm font-semibold text-foreground">Creador</p>
                     <span className="text-xs text-muted-foreground">2025 – Presente</span>
                   </div>
@@ -111,7 +123,6 @@ const CV = () => {
                   <ul className="text-xs text-muted-foreground space-y-0.5">
                     <li>• Plataforma de rifas online con pagos automatizados.</li>
                     <li>• Asignación de tickets y gestión vía bot de Telegram.</li>
-                    <li>• Arquitectura full-stack con panel de administración.</li>
                   </ul>
                 </div>
               </div>
@@ -121,6 +132,10 @@ const CV = () => {
             <section className="mb-6">
               <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-3 cv-section-title">Proyectos Destacados</h2>
               <div className="space-y-2">
+                <div>
+                  <p className="text-xs font-semibold text-foreground">IAxTi.cl</p>
+                  <p className="text-xs text-muted-foreground">IA en WhatsApp que atiende, da seguimiento y cierra ventas 24/7. Con o sin CRM.</p>
+                </div>
                 <div>
                   <p className="text-xs font-semibold text-foreground">Rifacil.click</p>
                   <p className="text-xs text-muted-foreground">Rifas online con pagos automatizados y gestión vía Telegram.</p>

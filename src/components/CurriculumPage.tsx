@@ -85,6 +85,13 @@ const services = [
 
 const projects = [
   {
+    title: "IAxTi.cl",
+    category: "IA + WhatsApp",
+    description:
+      "IA en tu WhatsApp que atiende clientes, da seguimiento y cierra ventas 24/7. Funciona con o sin CRM, integrada oficialmente con la API de WhatsApp Business como Tech Provider de Meta.",
+    link: "https://iaxti.cl",
+  },
+  {
     title: "Rifacil.click",
     category: "Plataforma Web",
     description:
@@ -252,6 +259,16 @@ const LinoTechPage = () => {
                   <span className="text-xs font-medium tracking-wider uppercase text-accent">{project.category}</span>
                   <h3 className="text-xl font-semibold text-foreground mt-3 mb-3">{project.title}</h3>
                   <p className="text-muted-foreground text-[0.95rem] leading-relaxed">{project.description}</p>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-4 text-sm font-medium text-accent hover:underline"
+                    >
+                      Visitar sitio →
+                    </a>
+                  )}
                 </div>
               </RevealSection>
             ))}
