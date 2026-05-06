@@ -133,6 +133,10 @@ const CV = () => {
               <h2 className="text-sm font-bold uppercase tracking-wider text-foreground mb-3 cv-section-title">Proyectos Destacados</h2>
               <div className="space-y-2">
                 <div>
+                  <p className="text-xs font-semibold text-foreground">IAxTi.cl</p>
+                  <p className="text-xs text-muted-foreground">IA en WhatsApp que atiende, da seguimiento y cierra ventas 24/7. Con o sin CRM.</p>
+                </div>
+                <div>
                   <p className="text-xs font-semibold text-foreground">Rifacil.click</p>
                   <p className="text-xs text-muted-foreground">Rifas online con pagos automatizados y gestión vía Telegram.</p>
                 </div>
