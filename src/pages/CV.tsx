@@ -104,6 +104,18 @@ const CV = () => {
                 </div>
                 <div>
                   <div className="flex items-center justify-between">
+                    <p className="text-sm font-semibold text-foreground">Fundador</p>
+                    <span className="text-xs text-muted-foreground">2025 – Presente</span>
+                  </div>
+                  <p className="text-xs font-medium text-accent mb-1">IAxTi.cl</p>
+                  <ul className="text-xs text-muted-foreground space-y-0.5">
+                    <li>• IA en WhatsApp que atiende, da seguimiento y cierra ventas 24/7.</li>
+                    <li>• Funciona con o sin CRM; integración oficial con WhatsApp Business API.</li>
+                    <li>• Calificación de leads, agenda automática y cierre conversacional.</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="flex items-center justify-between">
                     <p className="text-sm font-semibold text-foreground">Creador</p>
                     <span className="text-xs text-muted-foreground">2025 – Presente</span>
                   </div>
@@ -111,7 +123,6 @@ const CV = () => {
                   <ul className="text-xs text-muted-foreground space-y-0.5">
                     <li>• Plataforma de rifas online con pagos automatizados.</li>
                     <li>• Asignación de tickets y gestión vía bot de Telegram.</li>
-                    <li>• Arquitectura full-stack con panel de administración.</li>
                   </ul>
                 </div>
               </div>
