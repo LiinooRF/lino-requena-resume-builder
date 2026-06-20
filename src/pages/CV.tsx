@@ -127,12 +127,12 @@ const CV = () => {
                 </div>
                 <div>
                   <div className="flex items-center justify-between">
-                    <p className="text-sm font-semibold text-foreground">Docente</p>
+                    <p className="text-sm font-semibold text-foreground">Líder Track</p>
                     <span className="text-xs text-muted-foreground">2026</span>
                   </div>
                   <p className="text-xs font-medium text-accent mb-1">CITT · Duoc UC San Joaquín</p>
                   <ul className="text-xs text-muted-foreground space-y-0.5">
-                    <li>• Clases sobre desarrollo, automatización e integración con IA.</li>
+                    <li>• Clases de Automatización con n8n + IA.</li>
                   </ul>
                 </div>
                 <div>
