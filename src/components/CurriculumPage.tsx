@@ -99,9 +99,9 @@ const projects = [
   },
   {
     title: "PortalTerreno.com",
-    category: "Automatizaciones a medida",
+    category: "Chatbots a medida",
     description:
-      "Desarrollo de automatizaciones a medida (2026) para flujos internos y comerciales, con integraciones a APIs y optimización de procesos operativos.",
+      "Desarrollo de automatizaciones con chatbots a medida (2026) para atención, seguimiento y captura de leads, con integraciones a APIs.",
   },
   {
     title: "Líder Track · CITT Duoc UC",

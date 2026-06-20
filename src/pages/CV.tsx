@@ -116,13 +116,13 @@ const CV = () => {
                 </div>
                 <div>
                   <div className="flex items-center justify-between">
-                    <p className="text-sm font-semibold text-foreground">Automatizaciones a medida</p>
+                    <p className="text-sm font-semibold text-foreground">Automatizaciones con Chatbots a medida</p>
                     <span className="text-xs text-muted-foreground">2026</span>
                   </div>
                   <p className="text-xs font-medium text-accent mb-1">PortalTerreno.com</p>
                   <ul className="text-xs text-muted-foreground space-y-0.5">
-                    <li>• Desarrollo de automatizaciones a medida para flujos internos y comerciales.</li>
-                    <li>• Integraciones con APIs y optimización de procesos operativos.</li>
+                    <li>• Desarrollo de chatbots a medida para atención, seguimiento y captura de leads.</li>
+                    <li>• Automatización de flujos comerciales e integraciones con APIs.</li>
                   </ul>
                 </div>
                 <div>
