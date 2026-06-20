@@ -98,6 +98,18 @@ const projects = [
       "Sistema completo de rifas online con validación de pagos, asignación aleatoria de tickets y gestión automatizada mediante bot de Telegram.",
   },
   {
+    title: "PortalTerreno.com",
+    category: "Automatizaciones a medida",
+    description:
+      "Desarrollo de automatizaciones a medida (2026) para flujos internos y comerciales, con integraciones a APIs y optimización de procesos operativos.",
+  },
+  {
+    title: "Docencia · CITT Duoc UC",
+    category: "Educación",
+    description:
+      "Clases en el CITT de Duoc UC sede San Joaquín (2026) sobre desarrollo, automatización e integración con IA.",
+  },
+  {
     title: "Bot de Gestión",
     category: "Automatización",
     description:
