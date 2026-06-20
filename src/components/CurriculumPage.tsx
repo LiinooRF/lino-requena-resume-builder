@@ -104,10 +104,10 @@ const projects = [
       "Desarrollo de automatizaciones a medida (2026) para flujos internos y comerciales, con integraciones a APIs y optimización de procesos operativos.",
   },
   {
-    title: "Docencia · CITT Duoc UC",
-    category: "Educación",
+    title: "Líder Track · CITT Duoc UC",
+    category: "Automatización con n8n + IA",
     description:
-      "Clases en el CITT de Duoc UC sede San Joaquín (2026) sobre desarrollo, automatización e integración con IA.",
+      "Líder Track en el CITT de Duoc UC sede San Joaquín (2026), dictando clases de Automatización con n8n + IA.",
   },
   {
     title: "Bot de Gestión",
