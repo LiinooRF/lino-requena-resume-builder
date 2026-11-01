@@ -8,6 +8,7 @@ import {
   FileImage,
   BadgeCheck,
   Github,
+  Printer,
 } from "lucide-react";
 import metaTechProvider from "@/assets/meta-tech-provider.png";
 
@@ -177,11 +178,11 @@ const skills = [
   },
 ];
 
-const CV = () => {
-  const handleDownloadPDF = () => {
-    window.print();
-  };
+// Archivo generado con `npm run pdf`. Hay que regenerarlo cuando cambie
+// el contenido de esta pagina.
+const PDF_URL = "/cv-lino-requena.pdf";
 
+const CV = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Nav - hidden on print */}
@@ -200,9 +201,21 @@ const CV = () => {
                 GitHub
               </a>
             </Button>
-            <Button size="sm" onClick={handleDownloadPDF}>
-              <Download className="w-4 h-4 mr-1" />
-              Descargar PDF
+            <Button size="sm" asChild>
+              <a href={PDF_URL} download="Lino Requena - CV.pdf">
+                <Download className="w-4 h-4 mr-1" />
+                Descargar PDF
+              </a>
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="hidden sm:inline-flex text-muted-foreground"
+              onClick={() => window.print()}
+              title="Imprimir esta pagina"
+            >
+              <Printer className="w-4 h-4" />
+              <span className="sr-only">Imprimir</span>
             </Button>
           </div>
         </div>
