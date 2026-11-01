@@ -31,7 +31,7 @@ const experience: Job[] = [
     orgUrl: "https://voxtilabs.cl",
     period: "2026 – Presente",
     bullets: [
-      "Creé VoxIA, voz humana automatizada: vendido a la Municipalidad de Temuco y operando hoy en el 800 100 650. Llama apenas entra el contacto y lo deja trackeado en Pipedrive.",
+      "Creé VoxIA, voz humana automatizada que llama al contacto apenas entra: vendido a la Municipalidad de Temuco, donde opera hoy en el 800 100 650.",
       "Creé IAxTi: CRM omnicanal con IA que atiende, da seguimiento y cierra ventas 24/7, pensado para pymes que no tienen un equipo detrás.",
       "Levanté la infraestructura completa del producto: VPS y servidores dedicados, Docker, Dokploy, CI/CD y Cloudflare.",
       "Creé SentryCore: software de rondas de guardias con NFC y GPS, con la app del guardia publicada en Google Play y panel web para el supervisor.",
@@ -44,7 +44,7 @@ const experience: Job[] = [
     period: "2026",
     bullets: [
       "Rediseñé flujos en n8n potenciados con IA para sacarle trabajo manual a la operación de los clientes.",
-      "Conecté CRM, canales de mensajería y APIs de terceros en un solo circuito.",
+      "Conecté CRM (Pipedrive), canales de mensajería y APIs de terceros en un solo circuito.",
       "Construí landings de captación optimizadas para buscadores y para IA (SEO/AEO).",
     ],
   },
@@ -95,7 +95,7 @@ const projects: Project[] = [
     link: "https://voxtilabs.cl",
     linkLabel: "voxtilabs.cl",
     detail:
-      "Vendido a la Municipalidad de Temuco y operando en el 800 100 650. Voz humana automatizada que llama apenas entra el contacto y lo deja trackeado en Pipedrive. También en producción en Inmobiliaria Segura.",
+      "Vendido a la Municipalidad de Temuco, donde opera en el 800 100 650. Voz humana automatizada que llama al contacto apenas entra. También en producción en Inmobiliaria Segura, con el seguimiento sincronizado a Pipedrive.",
   },
   {
     title: "IAxTi · CRM omnicanal con IA",
