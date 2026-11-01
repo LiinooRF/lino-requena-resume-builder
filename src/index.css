@@ -288,7 +288,9 @@
     color: #555 !important;
   }
 
-  .text-accent {
+  .text-accent,
+  .text-accent a,
+  a.text-accent {
     color: #2a7ab5 !important;
   }
 

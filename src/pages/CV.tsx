@@ -11,13 +11,14 @@ import {
 } from "lucide-react";
 import metaTechProvider from "@/assets/meta-tech-provider.png";
 
-// Flyer del Track de n8n en el CITT. Al tener el archivo: dejarlo en public/
-// y poner su ruta aqui (ej. "/flyer-track-n8n.jpg"). Con null no se muestra nada.
-const TRACK_FLYER: string | null = null;
+// Flyer del Track de n8n en el CITT (public/flyer-track-n8n.jpg).
+// Con null el enlace no se muestra.
+const TRACK_FLYER: string | null = "/flyer-track-n8n.jpg";
 
 type Job = {
   role: string;
   org: string;
+  orgUrl?: string;
   period: string;
   bullets: string[];
   flyer?: boolean;
@@ -27,83 +28,95 @@ const experience: Job[] = [
   {
     role: "Cofundador & Desarrollador Full Stack",
     org: "VoxTi Labs · voxtilabs.cl",
+    orgUrl: "https://voxtilabs.cl",
     period: "2026 – Presente",
     bullets: [
-      "VoxIA: contacto de leads en el menor tiempo posible mediante automatización de voz humana, con trackeo de cada llamado en Pipedrive.",
-      "IAxTi: CRM omnicanal potenciado por IA, hecho para pymes por una pyme.",
-      "Observabilidad del stack con Sentry autohospedado (sentry.voxtilabs.cl): errores, releases y alertas.",
-      "Despliegue continuo sobre VPS y servidores dedicados con Dokploy, Docker y Cloudflare.",
+      "Creé VoxIA, voz humana automatizada: vendido a la Municipalidad de Temuco y operando hoy en el 800 100 650. Llama apenas entra el contacto y lo deja trackeado en Pipedrive.",
+      "Creé IAxTi: CRM omnicanal con IA que atiende, da seguimiento y cierra ventas 24/7, pensado para pymes que no tienen un equipo detrás.",
+      "Levanté la infraestructura completa del producto: VPS y servidores dedicados, Docker, Dokploy, CI/CD y Cloudflare.",
+      "Creé SentryCore: software de rondas de guardias con NFC y GPS, con la app del guardia publicada en Google Play y panel web para el supervisor.",
     ],
   },
   {
-    role: "Automatizador · n8n + IA",
+    role: "Especialista en Automatización con IA",
     org: "Agencia Palena",
+    orgUrl: "https://agenciapalena.cl",
     period: "2026",
     bullets: [
-      "Mejoramiento de flujos en n8n potenciados con IA para operaciones de clientes.",
-      "Integraciones entre CRM, canales de mensajería y APIs de terceros.",
-      "Landings de captación con SEO/AEO.",
+      "Rediseñé flujos en n8n potenciados con IA para sacarle trabajo manual a la operación de los clientes.",
+      "Conecté CRM, canales de mensajería y APIs de terceros en un solo circuito.",
+      "Construí landings de captación optimizadas para buscadores y para IA (SEO/AEO).",
     ],
   },
   {
-    role: "Líder de Track · Automatización con n8n + IA",
+    role: "Líder de Track e Instructor",
     org: "CITT · Duoc UC San Joaquín",
+    orgUrl: "https://www.duoc.cl",
     period: "2026",
     bullets: [
-      "Imparto el track de Automatización con n8n + IA: clases, material y acompañamiento de proyectos.",
+      "Dirijo e imparto el track de Automatización con n8n + IA: clases, material propio y acompañamiento de los proyectos.",
     ],
     flyer: true,
   },
   {
-    role: "Fundador & Desarrollador",
-    org: "LinoTech SpA",
+    role: "Desarrollador Full Stack Independiente",
+    org: "Proyectos propios y para clientes",
     period: "2025 – Presente",
     bullets: [
-      "Desarrollo de software y soluciones digitales para pymes.",
-      "Automatización con n8n, Telegram, WhatsApp Business API y correo transaccional.",
-      "Administración de servidores: VPS, servidores dedicados, Linux y Nginx.",
+      "Llevo proyectos de punta a punta para pymes: del problema del cliente al producto funcionando.",
+      "Automatizo operaciones con n8n, WhatsApp Business API, Telegram y correo transaccional.",
+      "Administro los servidores donde corre todo: VPS, servidores dedicados, Linux y Nginx.",
     ],
   },
   {
-    role: "Automatizaciones con chatbots a medida",
+    role: "Desarrollador de Chatbots a Medida",
     org: "PortalTerreno.com",
+    orgUrl: "https://portalterreno.com",
     period: "2026",
     bullets: [
-      "Chatbots a medida para atención, seguimiento y captura de leads.",
-      "Automatización de flujos comerciales e integración con APIs.",
-    ],
-  },
-  {
-    role: "Creador",
-    org: "Rifacil.click",
-    period: "2025 – Presente",
-    bullets: [
-      "Plataforma de rifas online con validación de pagos y asignación de tickets.",
-      "Gestión y notificaciones vía bot de Telegram.",
+      "Chatbots que atienden, hacen seguimiento y capturan leads sin intervención humana.",
+      "Automaticé el flujo comercial completo integrando sus APIs.",
     ],
   },
 ];
 
-const projects = [
+type Project = {
+  title: string;
+  detail: string;
+  link?: string;
+  linkLabel?: string;
+  link2?: string;
+  link2Label?: string;
+};
+
+const projects: Project[] = [
   {
     title: "VoxIA · Contacto de leads por voz",
+    link: "https://voxtilabs.cl",
+    linkLabel: "voxtilabs.cl",
     detail:
-      "Contacta al lead en el menor tiempo posible y trackea cada llamado en Pipedrive. En producción en Inmobiliaria Segura.",
+      "Vendido a la Municipalidad de Temuco y operando en el 800 100 650. Voz humana automatizada que llama apenas entra el contacto y lo deja trackeado en Pipedrive. También en producción en Inmobiliaria Segura.",
   },
   {
     title: "IAxTi · CRM omnicanal con IA",
+    link: "https://iaxti.cl",
+    linkLabel: "iaxti.cl",
     detail:
-      "Hecho para pymes por una pyme. WhatsApp Business API oficial como Meta Tech Provider.",
+      "Atiende, da seguimiento y cierra ventas 24/7. Hecho para pymes por una pyme, sobre WhatsApp Business API oficial.",
   },
   {
-    title: "Sentry autohospedado",
+    title: "SentryCore · App en Google Play",
     detail:
-      "sentry.voxtilabs.cl: punto único de errores y releases en producción.",
+      "Software de rondas de guardias para seguridad privada: el guardia marca cada punto con NFC, el recorrido queda registrado y el informe con mapa sale solo. Panel web para el supervisor y preparado para la Ley 21.719.",
+    link: "https://sentry.voxtilabs.cl",
+    linkLabel: "sentry.voxtilabs.cl",
+    link2: "https://play.google.com/store/apps/details?id=com.voxtilabs.sentrycore",
+    link2Label: "Google Play",
   },
   {
     title: "Landings con SEO/AEO",
     detail:
-      "Captación optimizada para buscadores y motores de respuesta con IA.",
+      "Páginas que captan tanto desde Google como desde ChatGPT y Perplexity.",
   },
 ];
 
@@ -125,7 +138,7 @@ const skills = [
   },
   {
     label: "Observabilidad",
-    items: ["Sentry (autohospedado)", "Monitoreo y alertas", "Healthchecks"],
+    items: ["Sentry", "Grafana", "Monitoreo y alertas", "Healthchecks"],
   },
   {
     label: "IA & Agentes",
@@ -247,15 +260,15 @@ const CV = () => {
             Perfil profesional
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Desarrollador full stack especializado en automatizaciones con IA e infraestructura, con el objetivo
-            de consolidarme en <strong className="text-foreground font-semibold">DevOps</strong>. Cofundador de{" "}
-            <strong className="text-foreground font-semibold">VoxTi Labs</strong>, donde desarrollo{" "}
-            <strong className="text-foreground font-semibold">VoxIA</strong> —contacto de leads por voz humana
-            automatizada— e <strong className="text-foreground font-semibold">IAxTi</strong>, CRM omnicanal
-            potenciado por IA hecho para pymes por una pyme. Administro mi propia infraestructura (VPS y servidores
-            dedicados, Docker, Dokploy, CI/CD, Cloudflare, Sentry autohospedado) y construyo agentes de IA sobre
-            PostgreSQL, Oracle, Redis y Supabase. Fundador de LinoTech SpA y Líder de Track de Automatización con
-            n8n + IA en el CITT de Duoc UC.{" "}
+            Construyo productos que contactan, atienden y venden solos, y la infraestructura donde corren.
+            Cofundador de <strong className="text-foreground font-semibold">VoxTi Labs</strong>, donde creé{" "}
+            <strong className="text-foreground font-semibold">VoxIA</strong> —voz humana automatizada que llama al
+            lead apenas entra— e <strong className="text-foreground font-semibold">IAxTi</strong>, un CRM omnicanal
+            con IA que atiende 24/7, hecho para pymes por una pyme. No solo escribo el código: administro los
+            servidores donde vive, con VPS y servidores dedicados, Docker, Dokploy, CI/CD, Cloudflare y Sentry.
+            Eso es lo que me lleva hacia{" "}
+            <strong className="text-foreground font-semibold">DevOps</strong>. Líder de Track de Automatización
+            con n8n + IA en el CITT de Duoc UC.{" "}
             <strong className="text-foreground font-semibold">Meta Tech Provider verificado</strong>.
           </p>
         </section>
@@ -275,7 +288,15 @@ const CV = () => {
                       <h3 className="text-sm font-semibold text-foreground leading-snug">{job.role}</h3>
                       <span className="text-xs text-muted-foreground whitespace-nowrap">{job.period}</span>
                     </div>
-                    <p className="text-xs font-medium text-accent mb-1">{job.org}</p>
+                    <p className="text-xs font-medium text-accent mb-1">
+                      {job.orgUrl ? (
+                        <a href={job.orgUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                          {job.org}
+                        </a>
+                      ) : (
+                        job.org
+                      )}
+                    </p>
                     <ul className="text-xs text-muted-foreground space-y-0.5">
                       {job.bullets.map((b) => (
                         <li key={b}>• {b}</li>
@@ -308,7 +329,35 @@ const CV = () => {
                 {projects.map((p) => (
                   <article key={p.title}>
                     <h3 className="text-xs font-semibold text-foreground">{p.title}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{p.detail}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      {p.detail}
+                      {p.link && (
+                        <>
+                          {" "}
+                          <a
+                            href={p.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-medium text-accent hover:underline"
+                          >
+                            {p.linkLabel} →
+                          </a>
+                        </>
+                      )}
+                      {p.link2 && (
+                        <>
+                          {" · "}
+                          <a
+                            href={p.link2}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-medium text-accent hover:underline"
+                          >
+                            {p.link2Label} →
+                          </a>
+                        </>
+                      )}
+                    </p>
                   </article>
                 ))}
               </div>
