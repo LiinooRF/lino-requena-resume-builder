@@ -148,12 +148,58 @@
     margin-bottom: 6px !important;
   }
 
-  .cv-meta-badge img {
-    height: 22px !important;
+  .cv-meta-badge {
+    margin-top: 5px !important;
+    padding: 4px 7px !important;
+    border-radius: 4px !important;
+    border: 1px solid #c9a227 !important;
+    background: #fdf8e8 !important;
+    gap: 7px !important;
+    break-inside: avoid;
+  }
+
+  .cv-meta-logo {
+    height: 24px !important;
   }
 
   .cv-meta-badge p {
     font-size: 7pt !important;
+    line-height: 1.25 !important;
+  }
+
+  .cv-meta-badge p:first-child {
+    font-size: 7.8pt !important;
+  }
+
+  .cv-job {
+    padding-left: 7px !important;
+    break-inside: avoid;
+  }
+
+  span.cv-job-dot,
+  span.cv-goal-dot {
+    width: 3px !important;
+    height: 3px !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: #c9a227 !important;
+  }
+
+  .cv-chips li {
+    padding: 0.5px 4px !important;
+    font-size: 6.8pt !important;
+    border: 1px solid #ddd !important;
+    background: #f7f7f7 !important;
+  }
+
+  .cv-chips {
+    gap: 2px !important;
+  }
+
+  h3 {
+    break-after: avoid;
   }
 
   hr {
@@ -181,16 +227,26 @@
   .cv-columns {
     display: grid !important;
     grid-template-columns: 1.15fr 1fr !important;
-    gap: 16px !important;
+    column-gap: 14px !important;
+    align-items: start !important;
   }
 
   section {
-    margin-bottom: 6px !important;
+    margin-bottom: 7px !important;
     break-inside: avoid;
+  }
+
+  .cv-col-left > section:last-child,
+  .cv-col-right > section:last-child {
+    margin-bottom: 0 !important;
   }
 
   .space-y-4 > * + * {
     margin-top: 4px !important;
+  }
+
+  .space-y-2\.5 > * + * {
+    margin-top: 2.5px !important;
   }
 
   .space-y-3 > * + * {
@@ -216,6 +272,11 @@
   .rounded-full {
     padding: 1px 5px !important;
     font-size: 7pt !important;
+  }
+
+  .rounded-md {
+    padding: 0.5px 4px !important;
+    font-size: 6.8pt !important;
   }
 
   * {

@@ -1,0 +1,57 @@
+# Lino Requena
+
+> Cofundador de VoxTi Labs (voxtilabs.cl). Desarrollador full stack chileno especializado en automatizaciones con IA, agentes e
+> infraestructura, con objetivo profesional en DevOps. Meta Tech Provider verificado.
+> Santiago, Chile.
+
+## Identidad
+
+- Nombre: Lino Requena
+- Rol: Cofundador de VoxTi Labs · Desarrollador Full Stack · Automatizaciones con IA · DevOps
+- Ubicación: Santiago, Chile
+- Correo: linitoo@icloud.com
+- Teléfono: +56 9 3702 9093
+- GitHub: https://github.com/LiinooRF
+- Acreditación: Meta Tech Provider verificado (integración oficial de WhatsApp Business API)
+
+## Experiencia
+
+- **VoxTi Labs** (voxtilabs.cl, 2026 – presente) — Cofundador y desarrollador full stack.
+  Desarrolla VoxIA e IAxTi y la observabilidad del stack con Sentry autohospedado. Despliegue continuo sobre VPS y servidores dedicados con Dokploy, Docker y Cloudflare.
+- **Agencia Palena** (2026) — Automatizador. Mejoramiento de flujos en n8n potenciados con IA,
+  integraciones entre CRM y canales de mensajería, landings con SEO/AEO.
+- **CITT · Duoc UC San Joaquín** (2026) — Líder de Track. Imparte el track de Automatización con n8n + IA.
+- **LinoTech SpA** (2025 – presente) — Fundador y desarrollador. Software para pymes,
+  automatización y administración de servidores.
+- **PortalTerreno.com** (2026) — Chatbots a medida para atención, seguimiento y captura de leads.
+- **Rifacil.click** (2025 – presente) — Creador. Rifas online con pagos automatizados y bot de Telegram.
+
+## Proyectos
+
+- **VoxIA** — Automatización de voz humana que contacta leads en el menor tiempo posible y trackea
+  cada llamado, sincronizado con Pipedrive. En producción en Inmobiliaria Segura.
+- **IAxTi** — CRM omnicanal potenciado por IA, hecho para pymes por una pyme. WhatsApp Business API oficial.
+- **Sentry autohospedado** — sentry.voxtilabs.cl, punto único de errores y releases en producción.
+- **Landings con SEO/AEO** — Sitios de captación optimizados para buscadores y motores de respuesta con IA.
+
+## Stack técnico
+
+- DevOps e infraestructura: VPS, servidores dedicados, SysAdmin Linux, Docker, Dokploy, CI/CD,
+  Nginx, Traefik, Cloudflare (firewall, DNS, WAF), Vercel
+- Observabilidad: Sentry autohospedado, monitoreo y alertas, healthchecks
+- IA y agentes: agentes de IA, Vercel AI SDK, OpenRouter, integración de LLMs, n8n,
+  automatización de voz, prompting aplicado
+- Bases de datos: PostgreSQL, Oracle, Redis, Supabase, SQL Server
+- Lenguajes y frameworks: TypeScript, Python, Java, Node.js, React, Tailwind CSS
+- Integraciones: WhatsApp Business API, APIs de Meta, Telegram, Chatwoot, Pipedrive, Mailgun
+- Web y posicionamiento: SEO, AEO, landings de conversión, WordPress, HTML/CSS
+
+## Formación
+
+- Ingeniería Informática — Duoc UC (2º año en curso)
+- Desarrollo Web Full Stack — Coderhouse (2022)
+
+## Idiomas
+
+- Español: nativo
+- Inglés: básico

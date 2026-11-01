@@ -1,7 +1,7 @@
-import LinoTechPage from "@/components/CurriculumPage";
+import CV from "./CV";
 
 const Index = () => {
-  return <LinoTechPage />;
+  return <CV />;
 };
 
 export default Index;
