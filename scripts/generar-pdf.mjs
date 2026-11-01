@@ -13,6 +13,7 @@ import { setTimeout as sleep } from "node:timers/promises";
 
 const PUERTO = 4390;
 const SALIDA = "public/cv-lino-requena.pdf";
+const SITIO = "https://www.liinoo.tech";
 
 let chromium;
 try {
@@ -40,6 +41,16 @@ try {
   const navegador = await chromium.launch();
   const pagina = await navegador.newPage();
   await pagina.goto(`http://localhost:${PUERTO}/`, { waitUntil: "networkidle" });
+
+  // Dentro del PDF un href relativo queda apuntando a localhost y no abre
+  // nada. Hay que pasarlos todos al dominio real antes de imprimir.
+  const reescritos = await pagina.evaluate((sitio) => {
+    const enlaces = [...document.querySelectorAll('a[href^="/"]')];
+    enlaces.forEach((a) => (a.href = sitio + a.getAttribute("href")));
+    return enlaces.length;
+  }, SITIO);
+  if (reescritos) console.log(`${reescritos} enlace(s) relativo(s) apuntados a ${SITIO}`);
+
   await pagina.pdf({
     path: SALIDA,
     format: "A4",
