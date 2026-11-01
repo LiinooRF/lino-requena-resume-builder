@@ -198,8 +198,29 @@
     gap: 2px !important;
   }
 
+  h2,
   h3 {
     break-after: avoid;
+    break-inside: avoid;
+  }
+
+  /* si alguna vez pasa a dos hojas, que nunca corte a media entrada
+     ni deje una linea suelta arriba o abajo de la pagina */
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .cv-job,
+  .cv-chips,
+  article {
+    break-inside: avoid;
+  }
+
+  .cv-col-left,
+  .cv-col-right {
+    break-inside: auto;
   }
 
   hr {
